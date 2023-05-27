@@ -3,7 +3,7 @@ Please note that this script has not been tested. I have writen this script base
 
 The script is writen for pi os and a raspberry pi 4 with one extra ehternet port. The script can be run without this interface to and wont have any consequences but it is based on my situation.
 
-personaly i do not use the wlan of my pi and only use the 2 physical ethernet ports it has equiped. eth0 is the wan port in this cenario and eth1 is my ethernet adapter.
+personaly i do not use the wlan of my pi and only use the 2 physical ethernet ports it has equiped. eth0 is the WAN port in this cenario and eth1 is my ethernet adapter.
 
 The script might need tweaking as for i have stated bofore it hasn't been tested.
 
