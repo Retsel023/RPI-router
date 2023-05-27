@@ -9,6 +9,9 @@ echo "Done Updating!"
 echo "Preparing Installation items..."
 apt install git hostapd dnsmasq
 
+#git
+git clone https://github.com/Retsel023/RPI-router.git
+
 #hostapd.conf
 echo "Hostapd configuration preparation..."
 yes | cp -rf hostapd.conf /etc/hostapd/hostapd.conf
