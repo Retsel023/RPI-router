@@ -11,6 +11,10 @@ apt install git hostapd dnsmasq
 
 #git
 git clone https://github.com/Retsel023/RPI-router.git
+mkdir /home/RPI-router
+yes | cp -rf RPI-router/* /home/RPI-router
+rm -r RPI-router/
+cd /home/RPI-router
 
 #hostapd.conf
 echo "Hostapd configuration preparation..."
