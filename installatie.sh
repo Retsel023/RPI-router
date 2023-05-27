@@ -26,6 +26,9 @@ systemctl start hostapd
 echo "Dnsmasq configuration preparation..."
 yes | cp -rf dnsmasq.conf /etc/dnsmasq.conf
 
+echo "dhcpcd configuration preparation..."
+yes | cp -rf dhcpcd.conf /etc/dhcpcd.conf
+
 #ipv4 forwarding
 yes | cp -rf sysctl.conf /etc/sysctl.conf
 sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
@@ -51,3 +54,7 @@ chmod +x /etc/rc.local
 systemctl unmask rc-local
 systemctl enable rc-local
 systemctl start rc-local
+
+echo "Done!"
+echo "Rebooting"
+reboot
