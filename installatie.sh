@@ -21,7 +21,6 @@ systemctl start hostapd
 
 echo "Dnsmasq configuration preparation..."
 yes | cp -rf dnsmasq.conf /etc/dnsmasq.conf
-yes | cp -rf dnsmasq.service /lib/systemd/system/dnsmasq.service
 
 #ipv4 forwarding
 yes | cp -rf sysctl.conf /etc/sysctl.conf
