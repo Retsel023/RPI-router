@@ -34,11 +34,11 @@ sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
 ################
 ### iptables ###
 ################
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j DNAT --to-destination 192.168.1.2:443
+iptables -t nat -A PREROUTING -i eth0 -p udp --dport 51820 -j DNAT --to-destination 192.168.1.2:51820
 iptables -A INPUT -i eth0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 iptables -A INPUT -i eth0 -j DROP
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-#iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j DNAT --to-destination 192.168.1.2:443
-#iptables -t nat -A PREROUTING -i eth0 -p udp --dport 51820 -j DNAT --to-destination 192.168.1.2:51820
 
 sh -c "iptables-save > /etc/iptables.ipv4.nat"
 
